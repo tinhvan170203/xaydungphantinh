@@ -683,9 +683,6 @@
         .thongtin {
             margin-top: 12px
         }
-        .tongquat-item:first-child {
-            margin-top: 24px
-        }
     }
     /* Tablet Styles */
     
@@ -701,5 +698,8 @@
         }
         .img-text {
             font-size: 14px;
+        }
+        .tongquat-item {
+            margin: 24px 0px 12px
         }
     }
