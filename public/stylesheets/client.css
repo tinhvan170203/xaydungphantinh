@@ -606,9 +606,9 @@
         .tongquat-item {
             margin: 18px
         }
-        .tongquat-item:first-child {
+        /* .tongquat-item:first-child {
             margin-top: 24px
-        }
+        } */
         .tongquat-item-chuthich {
             height: 180px;
         }
