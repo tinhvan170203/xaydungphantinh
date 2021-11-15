@@ -590,7 +590,7 @@
             border-radius: 100%;
         }
         .tongquat-heading {
-            display: none
+            display: none;
         }
         .tongquat-item:first-child {
             margin-top: 24px
@@ -598,8 +598,15 @@
         .tongquat-item-chuthich {
             height: 180px;
         }
+        .svg-container {
+            padding: 6px;
+            margin-right: 18px;
+        }
         .tongquat-item-title {
             font-size: 15px;
+        }
+        .tongquat-svg {
+            padding: 2px
         }
         .tongquat-item-sub-title {
             font-size: 14px;
