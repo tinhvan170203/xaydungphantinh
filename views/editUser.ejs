@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Quản trị tài khoản
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        .btn-login {
+            width: 100%;
+            background: #c52424;
+            border: none;
+            padding: 4px;
+            border-radius: 4px;
+            color: white;
+            margin-top: 8px;
+        }
+        
+        .message {
+            position: fixed;
+            z-index: 1000;
+            border: none;
+            align-items: center;
+            top: 0;
+            right: 0;
+            color: #030303;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            box-shadow: 1px 1px 2px #888;
+        }
+        
+        .close {
+            border: 1px solid white;
+            padding: 4px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="modal-custom">
+        <div class="over-lay"></div>
+        <div class="modal-wrapper-custom">
+            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/p206x206/245796161_404722361109981_7244192690336417172_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=aee45a&_nc_ohc=wtrXyng32toAX9T1qdk&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=5208d747ae60b7f36a0975cabe1be3a6&oe=619E6F6E"
+                class="modal-img">
+            <div class="modal-content-custom">
+                <p class="modal-content-text">Xác nhận xóa tài khoản khỏi hệ thống?</p>
+                <div class="btn-action">
+                    <button class="btn btn-edit-confirm" id="close-modal"><i class="far fa-window-close"></i> Hủy</button>
+                    <button class="btn btn-delete-confirm" id="deleted"><i class="far fa-check-circle"></i> Xác nhận</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <% if(typeof message != 'undefined' && message.length > 0){%>
+            <div class="alert alert-warning alert-dismissible fade show message" role="alert">
+                <div>
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <%-message %>
+                </div>
+                <button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">&times;</button>
+            </div>
+            <% } %>
+
+
+                <!-- banner  -->
+                <div id="banner">
+
+                </div>
+                <!-- end banner   -->
+
+                <!-- navbar desktop  -->
+                <div class="row wrapper">
+                    <div class="col-xl-2 col-md-2 col-sm-12 col-xs-12" id="menu-left">
+                        <ul class="navbar_list">
+                            <li class="navbar_item">
+                                <a href="/admin/quantridanhmuc">
+                                    <i class="fas fa-th-list navbar-icon"></i>
+                                    <span class="navbar_item-title">Quản trị danh mục</span>
+                                </a>
+                            </li>
+                            <li class="navbar_item active">
+                                <i class="fas fa-user-lock navbar-icon"></i>
+                                <span class="navbar_item-title">Quản trị tài khoản</span>
+                            </li>
+                            <li class="navbar_item">
+                                <a href="/admin/slide">
+                                    <i class="fab fa-apple navbar-icon"></i>
+                                    <span class="navbar_item-title">Quản trị Slide Show</span>
+                                </a>
+                            </li>
+                            <li class="navbar_item">
+                                <a href="/admin/news">
+                                    <i class="fas fa-newspaper navbar-icon"></i>
+                                    <span class="navbar_item-title">Quản trị bài đăng</span>
+                                </a>
+                            </li>
+                            <li class="navbar_item">
+                                <a href="/admin/logout">
+                                    <i class="fas fa-sign-out-alt navbar-icon"></i>
+                                    <span class="navbar_item-title">Đăng xuất</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end navbar -->
+
+                    <!-- main content    -->
+                    <div class="col-xl-10 col-md-10 col-sm-12 push-md-2" id="main">
+                        <h3 class="main-title">
+                            Quản trị danh sách tài khoản
+                        </h3>
+                        <h4 class="main-subtitle">
+                            Chỉnh sửa tài khoản
+                        </h4>
+                        <form action="/admin/users/edit/<%=user._id%>" class="form-inline" id="form1" method="POST">
+                            <div class="form-inline-item">
+                                <label class="form-inline-label">Tên tài khoản: </label>
+                                <input type="text" class="form-control" name="user" value="<%=user.user%>" placeholder="Tài khoản..." aria-label="First name">
+                            </div>
+                            <div class="form-inline-item">
+                                <label class="form-inline-label">Password: </label>
+                                <input type="password" class="form-control" name="password" value="<%=user.password%>" placeholder="Password...">
+                            </div>
+                            <button type="submit" class="btn btn-primary"><i class="fas fa-plus"></i> Cập nhật</button>
+                        </form>
+
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <td style="text-align:center">STT</td>
+                                    <td style="text-align:center;">Tên tài khoản</td>
+                                    <td style="text-align:center">Password</td>
+                                    <td style="text-align:center">Thao tác</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% if(data && data.length >0){
+                                    data.forEach((item, index)=>{ %>
+                                    <tr>
+                                        <td style="text-align:center">
+                                            <%= index + 1 %>
+                                        </td>
+                                        <td>
+                                            <%=item.user%>
+                                        </td>
+                                        <td style="text-align:center">
+                                            <%=item.password%>
+                                        </td>
+                                        <td style="text-align:center">
+                                            <a href="/admin/users/edit/<%=item._id%>"> <button class="btn btn-edit"><i class="fas fa-edit"></i></button></a>
+                                            <button class="btn btn-delete" id="<%=item._id%>"><i class="fas fa-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                    <% })
+                                }%>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- end main    -->
+
+                </div>
+
+    </div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js" integrity="sha384-qlmct0AOBiA2VPZkMY3+2WqkHtIQ9lSdAsAn5RUJD/3vA5MKDgSGcdmIv4ycVxyn" crossorigin="anonymous"></script>
+    <script>
+        const delete_Btn = document.querySelectorAll('.btn-delete');
+
+        let idDelete;
+        for (item of delete_Btn) {
+            item.onclick = function() {
+                idDelete = $(this).attr('id');
+                console.log(idDelete)
+                $('.over-lay').css('display', 'block')
+                $('.modal-wrapper-custom').css('display', 'flex')
+                $('.modal-custom').css('display', 'flex')
+            }
+        }
+
+        $('.over-lay').click(function() {
+            $('.over-lay').css('display', 'none')
+            $('.modal-wrapper-custom').css('display', 'none')
+            $('.modal-custom').css('display', 'none')
+        })
+
+        $('#deleted').click(function() {
+            $.ajax({
+                url: '/admin/users/delete/' + idDelete,
+                success: function(data) {
+                    window.location.href = '/admin/users'
+                }
+            })
+        })
+
+        $('#close-modal').click(function() {
+            $('.over-lay').css('display', 'none')
+            $('.modal-wrapper-custom').css('display', 'none')
+            $('.modal-custom').css('display', 'none')
+        })
+    </script>
+</body>
+
+
+</html>

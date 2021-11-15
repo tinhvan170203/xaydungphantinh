@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Xây dựng Tình Voòng
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel='stylesheet' href='/stylesheets/client.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&subset=latin-ext,cyrillic-ext,vietnamese,latin,cyrillic" rel="stylesheet"
+        type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,regular,italic,700,700italic&subset=latin-ext,greek-ext,cyrillic-ext,greek,vietnamese,latin,cyrillic" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <script src="js/jssor.slider-28.1.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.jssor_1_slider_init = function() {
+
+            var jssor_1_SlideoTransitions = [
+                [{
+                    b: 500,
+                    d: 1000,
+                    x: 0,
+                    e: {
+                        x: 6
+                    }
+                }],
+                [{
+                    b: -1,
+                    d: 1,
+                    x: 100,
+                    p: {
+                        x: {
+                            d: 1,
+                            dO: 9
+                        }
+                    }
+                }, {
+                    b: 0,
+                    d: 2000,
+                    x: 0,
+                    e: {
+                        x: 6
+                    },
+                    p: {
+                        x: {
+                            dl: 0.1
+                        }
+                    }
+                }],
+                [{
+                    b: -1,
+                    d: 1,
+                    x: 200,
+                    p: {
+                        x: {
+                            d: 1,
+                            dO: 9
+                        }
+                    }
+                }, {
+                    b: 0,
+                    d: 2000,
+                    x: 0,
+                    e: {
+                        x: 6
+                    },
+                    p: {
+                        x: {
+                            dl: 0.1
+                        }
+                    }
+                }],
+                [{
+                    b: -1,
+                    d: 1,
+                    rX: 20,
+                    rY: 90
+                }, {
+                    b: 0,
+                    d: 4000,
+                    rX: 0,
+                    e: {
+                        rX: 1
+                    }
+                }],
+                [{
+                    b: -1,
+                    d: 1,
+                    rY: -20
+                }, {
+                    b: 0,
+                    d: 4000,
+                    rY: -90,
+                    e: {
+                        rY: 7
+                    }
+                }],
+                [{
+                    b: -1,
+                    d: 1,
+                    sX: 2,
+                    sY: 2
+                }, {
+                    b: 1000,
+                    d: 3000,
+                    sX: 1,
+                    sY: 1,
+                    e: {
+                        sX: 1,
+                        sY: 1
+                    }
+                }],
+                [{
+                    b: -1,
+                    d: 1,
+                    sX: 2,
+                    sY: 2
+                }, {
+                    b: 1000,
+                    d: 5000,
+                    sX: 1,
+                    sY: 1,
+                    e: {
+                        sX: 3,
+                        sY: 3
+                    }
+                }],
+                [{
+                    b: -1,
+                    d: 1,
+                    tZ: 300
+                }, {
+                    b: 0,
+                    d: 2000,
+                    o: 1
+                }, {
+                    b: 3500,
+                    d: 3500,
+                    tZ: 0,
+                    e: {
+                        tZ: 1
+                    }
+                }],
+                [{
+                    b: -1,
+                    d: 1,
+                    x: 20,
+                    p: {
+                        x: {
+                            o: 33,
+                            r: 0.5
+                        }
+                    }
+                }, {
+                    b: 0,
+                    d: 1000,
+                    x: 0,
+                    o: 0.5,
+                    e: {
+                        x: 3,
+                        o: 1
+                    },
+                    p: {
+                        x: {
+                            dl: 0.05,
+                            o: 33
+                        },
+                        o: {
+                            dl: 0.02,
+                            o: 68,
+                            rd: 2
+                        }
+                    }
+                }, {
+                    b: 1000,
+                    d: 1000,
+                    o: 1,
+                    e: {
+                        o: 1
+                    },
+                    p: {
+                        o: {
+                            dl: 0.05,
+                            o: 68,
+                            rd: 2
+                        }
+                    }
+                }],
+                [{
+                    b: -1,
+                    d: 1,
+                    da: [0, 700]
+                }, {
+                    b: 0,
+                    d: 600,
+                    da: [700, 700],
+                    e: {
+                        da: 1
+                    }
+                }],
+                [{
+                    b: 600,
+                    d: 1000,
+                    o: 0.4
+                }],
+                [{
+                    b: -1,
+                    d: 1,
+                    da: [0, 400]
+                }, {
+                    b: 200,
+                    d: 600,
+                    da: [400, 400],
+                    e: {
+                        da: 1
+                    }
+                }],
+                [{
+                    b: 800,
+                    d: 1000,
+                    o: 0.4
+                }],
+                [{
+                    b: -1,
+                    d: 1,
+                    sX: 1.1,
+                    sY: 1.1
+                }, {
+                    b: 0,
+                    d: 1600,
+                    o: 1
+                }, {
+                    b: 1600,
+                    d: 5000,
+                    sX: 0.9,
+                    sY: 0.9,
+                    e: {
+                        sX: 1,
+                        sY: 1
+                    }
+                }],
+                [{
+                    b: 0,
+                    d: 1000,
+                    o: 1,
+                    p: {
+                        o: {
+                            o: 4
+                        }
+                    }
+                }],
+                [{
+                    b: 1000,
+                    d: 1000,
+                    o: 1,
+                    p: {
+                        o: {
+                            o: 4
+                        }
+                    }
+                }]
+            ];
+
+            var jssor_1_options = {
+                $AutoPlay: 1,
+                $CaptionSliderOptions: {
+                    $Class: $JssorCaptionSlideo$,
+                    $Transitions: jssor_1_SlideoTransitions
+                },
+                $ArrowNavigatorOptions: {
+                    $Class: $JssorArrowNavigator$
+                },
+                $BulletNavigatorOptions: {
+                    $Class: $JssorBulletNavigator$,
+                    $SpacingX: 16,
+                    $SpacingY: 16
+                }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*#region responsive code begin*/
+
+            var MAX_WIDTH = 1400;
+
+            function ScaleSlider() {
+                var containerElement = jssor_1_slider.$Elmt.parentNode;
+                var containerWidth = containerElement.clientWidth;
+
+                if (containerWidth) {
+
+                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                    jssor_1_slider.$ScaleWidth(expectedWidth);
+                } else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+
+            ScaleSlider();
+
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            /*#endregion responsive code end*/
+        };
+    </script>
+    <style>
+        /*jssor slider loading skin double-tail-spin css*/
+        
+        .jssorl-004-double-tail-spin img {
+            animation-name: jssorl-004-double-tail-spin;
+            animation-duration: 1.6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        
+        @keyframes jssorl-004-double-tail-spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        /*jssor slider bullet skin 031 css*/
+        
+        .jssorb031 {
+            position: absolute;
+        }
+        
+        .jssorb031 .i {
+            position: absolute;
+            cursor: pointer;
+        }
+        
+        .jssorb031 .i .b {
+            fill: #000;
+            fill-opacity: 0.6;
+            stroke: #fff;
+            stroke-width: 1600;
+            stroke-miterlimit: 10;
+            stroke-opacity: 0.8;
+        }
+        
+        .jssorb031 .i:hover .b {
+            fill: #fff;
+            fill-opacity: 1;
+            stroke: #000;
+            stroke-opacity: 1;
+        }
+        
+        .jssorb031 .iav .b {
+            fill: #fff;
+            stroke: #000;
+            stroke-width: 1600;
+            fill-opacity: .6;
+        }
+        
+        .jssorb031 .i.idn {
+            opacity: .3;
+        }
+        /*jssor slider arrow skin 051 css*/
+        
+        .jssora051 {
+            display: block;
+            position: absolute;
+            cursor: pointer;
+        }
+        
+        .jssora051 .a {
+            fill: none;
+            stroke: #fff;
+            stroke-width: 360;
+            stroke-miterlimit: 10;
+        }
+        
+        .jssora051:hover {
+            opacity: .8;
+        }
+        
+        .jssora051.jssora051dn {
+            opacity: .5;
+        }
+        
+        .jssora051.jssora051ds {
+            opacity: .3;
+            pointer-events: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <!-- banner  -->
+        <div class="row">
+            <div class="col-xl-12 col-sm-0" id="banner">
+                <div class="banner-contact">
+                    <p class="banner-telephone animate__animated animate__fadeInLeft"><i class="fas fa-phone-alt"></i> 0915.627.169</p>
+                    <p class="banner-telephone animate__animated animate__fadeInRight"><i class="far fa-envelope"></i> phanthihai20112002.@gmail.com</p>
+                </div>
+                <div class="banner-detail">
+                    <div class="banner-detail-left">
+                        <img src="./logo.jpg" alt="logo" class="banner-logo animate__animated animate__zoomIn">
+                        <div class="banner-left-text">
+                            <h3 class="company-name">Xây dựng công trình, tư vấn thiết kế nhà cửa Tình Vòong</h3>
+                            <div class="sub-content">
+                                <h4 class="sub-content-diachi animate__animated animate__zoomIn">Địa chỉ: Ngã 3 Lò Vôi, Đông Thịnh,
+                                    <p><br>Đông Xá, Vân Đồn, Quảng Ninh</p>
+                                </h4>
+                                <h4 class="sub-content-diachi animate__animated animate__zoomIn">Liên lạc mọi lúc, mọi nơi</h4>
+                                <h4 class="sub-content-diachi animate__animated animate__zoomIn">Tư vấn thiết kế, xây dựng nhà cửa
+                                    <p><br>Gọi ngay: 0915.627.169</p>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner-detail-right">
+                        <a href="https://www.facebook.com/profile.php?id=100021920978101"><i class="fab fa-facebook-square fb-icon"></i> Facebook</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- mobile   -->
+            <div class="col-xl-0 col-sm-12" id="banner-mobile">
+                <div class="fb-icon-mobile">
+                    <a href="https://www.facebook.com/profile.php?id=100021920978101"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Facebook-icon-1.png/240px-Facebook-icon-1.png" data-aos-offset="-300" data-aos-once="true" data-aos-delay="900" data-aos="fade-up" data-aos-anchor-placement="center-center"
+                            alt="" id="img-fb"></a>
+                </div>
+                <img src="./logo.jpg" alt="logo-mobile" class="banner-logo-mobile animate__animated animate__zoomIn">
+                <div style="text-align: center;padding: 6px 0; flex: 1">
+                    <h3 class="company-name-mobile">Xây dựng Tình Vòong</h3>
+                    <h4 class="sub-content-diachi animate__animated animate__zoomIn" style="margin: 0 auto">Tư vấn, xây dựng nhà cửa
+                        <p style="margin-top: 8px;">Gọi ngay: 0915.627.169</p>
+                    </h4>
+                </div>
+            </div>
+            <div class="navbar-mobile">
+                <ul class="navbar-mobile-list">
+                    <li class="navbar-mobile-item active">
+                        <a href="#">
+                            Trang chủ
+                        </a>
+                    </li>
+                    <li class="navbar-mobile-item">
+                        <a href="#">
+                            Biệt thự
+                        </a>
+                    </li>
+                    <li class="navbar-mobile-item">
+                        <a href="#">
+                            Nhà cao tầng
+                        </a>
+                    </li>
+                    <li class="navbar-mobile-item">
+                        <a href="#">
+                            Nhà mái thái
+                        </a>
+                    </li>
+                    <li class="navbar-mobile-item">
+                        <a href="#">
+                            Cống thoát nước
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- end mobile    -->
+        </div>
+        <!-- end banner   -->
+
+        <div class="row">
+            <!-- navbar desktop  -->
+            <ul class="navbar-desktop col-xl-12">
+                <li class="navbar-item active">
+                    <a href="#">
+                        <i class="fas fa-home navbar-desktop-icon"></i>
+                        <span class="navbar-desktop-text">Trang chủ</span>
+                    </a>
+                </li>
+                <!-- <li class="navbar-item">
+                    <a href="#">
+                        <i class="far fa-address-card navbar-desktop-icon"></i>
+                        <span class="navbar-desktop-text">Giới thiệu</span>
+                    </a>
+                </li> -->
+                <li class="navbar-item">
+                    <a href="/trangtin/617a566f4d8dcef2f898156a">
+                        <i class="fas fa-archway navbar-desktop-icon"></i>
+                        <span class="navbar-desktop-text">Biệt thự</span>
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#">
+                        <i class="far fa-building navbar-desktop-icon"></i>
+                        <span class="navbar-desktop-text">Nhà cao tầng</span>
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#">
+                        <i class="fas fa-church navbar-desktop-icon"></i>
+                        <span class="navbar-desktop-text">Nhà mái thái</span>
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#">
+                        <i class="fab fa-chromecast navbar-desktop-icon"></i>
+                        <span class="navbar-desktop-text">Cầu, cống thoát nước</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="slide-show row">
+            <!-- #region Jssor Slider Begin -->
+            <!-- Generator: Jssor Slider Composer -->
+            <!-- Source: https://www.jssor.com/demos/image-slider.slider/=edit -->
+
+
+            <div id="jssor_1" class="col-xl-12" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:380px;overflow:hidden;visibility:hidden;">
+                <!-- Loading Screen -->
+                <div data-u="loading" class="jssorl-004-double-tail-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+                    <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="img/double-tail-spin.svg" />
+                </div>
+                <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:380px;overflow:hidden;">
+                    <div style="background-color:#000000;">
+                        <img data-u="image" style="opacity:0.8;" src="http://res.cloudinary.com/tienlu/image/upload/v1635590293/ongngoai/uploads/do-thi-phuong-dong-3.jpg.jpg" />
+                        <div data-ts="flat" data-p="320" style="left:144px;top:80px;width:550px;height:90px;position:absolute;overflow:hidden;">
+                            <!-- <div data-to="50% 50%" data-ts="preserve-3d" data-t="0" style="left:550px;top:0px;width:550px;height:90px;position:absolute;overflow:hidden;">
+                                <div data-to="50% 50%" data-ts="preserve-3d" data-arr="1" style="left:20px;top:18px;width:200px;height:20px;position:absolute;color:#1d1d1d;font-size:16px;font-weight:900;line-height:1.2;letter-spacing:0.1em;">THIẾT KẾ XÂY DỰNG TÌNH VÒONG</div>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div>
+                        <img data-u="image" src="http://icdn.dantri.com.vn/zoom/1200_630/2020/06/04/nganh-xay-dung-1591259870656.jpg" />
+                        <div data-ts="flat" data-p="2720" data-po="50% 48%" style="left:0px;top:0px;width:980px;height:380px;position:absolute;">
+                            <div data-to="50% 50%" data-ts="preserve-3d" data-t="3" style="left:400px;top:-30px;width:500px;height:400px;position:absolute;">
+                                <div data-to="50% 50%" data-ts="preserve-3d" data-t="4" style="left:0px;top:0px;width:500px;height:400px;position:absolute;">
+                                    <div data-to="50% 50%" data-ts="preserve-3d" data-t="5" style="left:0px;top:0px;width:500px;height:400px;position:absolute;">
+                                        <div data-to="50% 50%" data-ts="preserve-3d" data-t="6" style="left:0px;top:0px;width:500px;height:400px;position:absolute;">
+                                            <div data-to="50% 50%" data-t="7" style="left:-50px;top:120px;width:600px;height:38px;position:absolute;opacity:0;color:#00a186;font-size:32px;font-weight:700;line-height:1.2;text-align:center;">Tư vấn, thiết kế, thi công công trình</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <img data-u="image" src="https://legiakhang.vn/wp-content/uploads/2020/04/thi-cong-xay-dung-bien-hoa-dong-nai-08.jpg" />
+                        <div data-ts="flat" data-p="2720" data-po="50% 48%" style="left:0px;top:0px;width:980px;height:380px;position:absolute;">
+                            <div data-to="50% 50%" data-ts="preserve-3d" data-arr="8" style="left:-2px;top:20px;width:1000px;height:20px;position:absolute;opacity:0;color:#333333;font-family:Arial,Helvetica,sans-serif;font-size:18px;line-height:1.2;letter-spacing:1.3em;text-align:center;">Hơn 20 năm kinh nghiệm</div>
+                        </div>
+                    </div>
+
+                    <div style="background-color:#000000;">
+                        <img data-u="image" style="opacity:0.5;" src="img/faded-monaco-scenery-evening-dark-picjumbo-com-image.jpg" />
+                        <div data-ts="flat" data-p="1800" data-po="50% -100%" style="left:120px;top:90px;width:600px;height:300px;position:absolute;">
+                            <svg viewbox="0 0 200 200" width="200" height="200" data-t="10" style="left:66px;top:21px;display:block;position:absolute;opacity:0.6;overflow:visible;">
+                                <path stroke-dasharray="0,700" fill="none" stroke="#ffffff" d="M0,100C0,44.77152 44.77152,0 100,0C155.22848,0 200,44.77152 200,100C200,155.22848 155.22848,200 100,200C44.77152,200 0,155.22848 0,100Z" data-t="9"></path>
+                            </svg>
+                            <svg viewbox="0 0 80 80" width="80" height="80" data-t="12" style="left:3px;top:124px;display:block;position:absolute;opacity:0.6;overflow:visible;">
+                                <path stroke-dasharray="0,400" fill="none" stroke="#ffffff" shape-rendering="crispEdges" d="M80,80L0,80L0,0L80,0Z" data-t="11"></path>
+                            </svg>
+                            <svg viewbox="0 0 500 200" data-to="50% 50%" width="500" height="200" data-t="13" style="left:50px;top:50px;display:block;position:absolute;opacity:0;overflow:visible;">
+                                <g>
+                                    <text fill="#ffffff" x="17" y="110" style="position:absolute;font-family:Montserrat,sans-serif;font-size:24px;font-weight:300;overflow:visible;">HÀNG VẠN
+                                    </text>
+                                    <text fill="#ffffff" x="188" y="110" style="position:absolute;font-family:Montserrat,sans-serif;font-size:32px;font-weight:500;letter-spacing:0.1em;overflow:visible;">CÔNG TRÌNH
+                                    </text>
+                                    <text fill="#ff3700" x="333" y="130" style="position:absolute;opacity:0.8;font-family:Montserrat,sans-serif;font-size:16px;font-weight:700;letter-spacing:0.1em;overflow:visible;">ĐƯỢC HOÀN THIỆN
+                                    </text>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <img data-u="image" src="img/px-bloom-blossom-flora-65219-image.jpg" />
+                        <div data-ts="flat" data-p="500" style="left:160px;top:-30px;width:800px;height:200px;position:absolute;">
+                            <div data-arr="14" style="left:-50px;top:36px;width:800px;height:70px;position:absolute;opacity:0;color:#199494;font-family:'Roboto Condensed',sans-serif;font-size:32px;font-weight:400;line-height:1.2;letter-spacing:-0.05em;text-align:center;text-shadow:2px 1px #d9d99a;">ĐẲNG CẤP&nbsp;&nbsp;<span style="font-size:2em;">CHẤT LƯỢNG</span>&nbsp;<span>THƯƠNG HIỆU</span></div>
+                            <div data-arr="15" style="left:-50px;top:106px;width:800px;height:48px;position:absolute;opacity:0;color:#0d4d4d;font-family:'Roboto Condensed',sans-serif;font-size:20px;font-weight:400;line-height:1.2;letter-spacing:0.2em;text-align:center;text-shadow:1px 1px #d9d99a;">Nơi khách hàng <span style="font-size:2em;">gửi trọn</span> niềm tin</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bullet Navigator -->
+                <div data-u="navigator" class="jssorb031" style="position:absolute;bottom:16px;right:16px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+                    <div data-u="prototype" class="i" style="width:13px;height:13px;">
+                        <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                            <circle class="b" cx="8000" cy="8000" r="5800"></circle>
+                        </svg>
+                    </div>
+                </div>
+                <!-- Arrow Navigator -->
+                <div data-u="arrowleft" class="jssora051" style="width:55px;height:55px;top:0px;left:25px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+                    <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                        <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+                    </svg>
+                </div>
+                <div data-u="arrowright" class="jssora051" style="width:55px;height:55px;top:0px;right:25px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+                    <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                        <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+                    </svg>
+                </div>
+            </div>
+            <script type="text/javascript">
+                jssor_1_slider_init();
+            </script>
+            <!-- #endregion Jssor Slider End -->
+        </div>
+
+        <div class="row tongquat">
+            <h3 class="tongquat-heading" data-aos-offset="-300" data-aos-once="true" data-aos-delay="300" data-aos="fade-down" data-aos-anchor-placement="center-center">đẳng cấp - kinh nghiệm - chu đáo - thương hiệu</h3>
+            <div class="col-xl-3 col-md-4 col-sm-12 tongquat-item" data-aos-offset="-300" data-aos-once="true" data-aos-delay="300" data-aos="fade-up" data-aos-anchor-placement="center-center">
+                <div class="svg-container">
+                    <svg class="tongquat-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve"> <g> 	<g> 		<path d="M453.034,361.322c-2.808-1.164-6.04-0.521-8.19,1.628l-82.126,82.126c-2.149,2.15-2.792,5.382-1.628,8.19    c1.162,2.809,3.904,4.639,6.943,4.639h82.126c4.151,0,7.515-3.364,7.515-7.515v-82.126    C457.673,365.225,455.842,362.485,453.034,361.322z M386.173,442.876l56.469-56.469v56.469H386.173z"></path> 	</g> </g> <g> 	<g> 		<path d="M507.361,240.867c-2.808-1.164-6.04-0.521-8.19,1.628l-22.507,22.507V111.971c0-4.151-3.365-7.515-7.515-7.515h-57.741    l20.96-20.96c0.003-0.003,0.006-0.007,0.009-0.01l20.196-20.196c4.327-4.327,6.71-10.083,6.71-16.203s-2.383-11.874-6.71-16.203    L429.219,7.53c-4.327-4.327-10.083-6.71-16.203-6.71s-11.875,2.383-16.203,6.71l-20.206,20.206l-24.416,24.416l-52.303,52.303    H66.62V30.11c0-4.151-3.365-7.515-7.515-7.515C26.515,22.597,0,49.11,0,81.702v319.186c0,0.555,0.064,1.095,0.178,1.615    c1.038,13.829,7.021,26.678,17.02,36.432C27.886,449.359,41.995,455.1,56.927,455.1h229.638l-43.249,43.249    c-2.149,2.15-2.792,5.381-1.629,8.19c1.163,2.808,3.904,4.639,6.943,4.639h255.855c4.15,0,7.515-3.364,7.515-7.515V247.81    C512,244.771,510.168,242.03,507.361,240.867z M407.443,18.159c3.072-3.074,8.077-3.074,11.149,0l23.355,23.355    c3.074,3.073,3.074,8.076,0,11.15l-14.891,14.892L392.55,33.051L407.443,18.159z M381.922,43.679l34.505,34.504l-13.789,13.789    l-34.503-34.504L381.922,43.679z M496.972,332.252h-13.865c-4.151,0-7.515,3.364-7.515,7.515c0,4.151,3.364,7.515,7.515,7.515    h13.865v22.646h-13.865c-4.151,0-7.515,3.364-7.515,7.515s3.364,7.515,7.515,7.515h13.865v22.645h-13.865    c-4.151,0-7.515,3.364-7.515,7.515c0,4.151,3.364,7.515,7.515,7.515h13.865v22.646h-13.865c-4.151,0-7.515,3.365-7.515,7.515    c0,4.151,3.364,7.515,7.515,7.515h13.865v35.842h-230.2l75.908-75.907c2.935-2.936,2.935-7.693,0-10.628    c-0.337-0.337-0.699-0.629-1.078-0.889c-2.926-2.004-6.952-1.709-9.551,0.889l-30.456,30.456H56.928    c-22.792,0-41.14-17.794-41.862-40.545c0.043-1.428,0.154-2.844,0.332-4.244c0.001-0.008,0.002-0.016,0.003-0.024    c0.084-0.665,0.185-1.327,0.3-1.985c0.013-0.075,0.027-0.15,0.04-0.225c0.105-0.587,0.223-1.171,0.352-1.753    c0.036-0.162,0.074-0.324,0.112-0.485c0.114-0.492,0.237-0.981,0.369-1.468c0.072-0.264,0.147-0.525,0.224-0.788    c0.11-0.382,0.224-0.763,0.345-1.14c0.121-0.377,0.25-0.75,0.381-1.123c0.091-0.261,0.181-0.522,0.279-0.781    c0.183-0.492,0.377-0.979,0.577-1.462c0.057-0.139,0.113-0.28,0.172-0.419c0.257-0.6,0.524-1.193,0.806-1.779    c0.012-0.025,0.023-0.05,0.035-0.075c5.878-12.164,17.183-21.233,30.75-24.047c0.038-0.008,0.076-0.017,0.114-0.025    c0.622-0.127,1.25-0.236,1.882-0.337c0.105-0.017,0.21-0.038,0.317-0.054c0.571-0.087,1.148-0.155,1.725-0.22    c0.162-0.018,0.323-0.043,0.486-0.059c0.557-0.056,1.119-0.093,1.681-0.128c0.178-0.011,0.356-0.03,0.534-0.039    c0.736-0.037,1.478-0.056,2.223-0.056c4.15,0,7.515-3.364,7.515-7.515v-54.489c0-4.151-3.365-7.515-7.515-7.515    c-4.15,0-7.515,3.364-7.515,7.515v47.447c-12.69,1.605-24.469,7.265-33.757,16.335c-0.977,0.954-1.903,1.946-2.805,2.954V81.702    c0-21.741,15.826-39.858,36.561-43.436v73.705v152.777v0.001c0,4.15,3.365,7.515,7.515,7.515c4.15,0,7.515-3.365,7.515-7.515    v-0.001V119.486h218.24l-41.544,41.544c-2.935,2.936-2.935,7.693,0,10.628c2.935,2.934,7.693,2.934,10.627,0l54.373-54.373    c0.002-0.002,0.003-0.004,0.005-0.005l49.185-49.185l34.503,34.505l-4.048,4.048c-0.003,0.003-0.007,0.006-0.01,0.009    l-151.528,151.53l-34.504-34.504l29.868-29.868c2.935-2.936,2.935-7.693,0-10.628c-2.935-2.934-7.693-2.934-10.627,0    l-35.183,35.182c-0.188,0.188-0.364,0.387-0.529,0.591c-0.055,0.068-0.104,0.141-0.156,0.212c-0.106,0.141-0.21,0.283-0.307,0.431    c-0.055,0.086-0.105,0.174-0.157,0.263c-0.083,0.14-0.163,0.282-0.236,0.427c-0.048,0.094-0.091,0.189-0.135,0.287    c-0.067,0.147-0.129,0.297-0.186,0.447c-0.02,0.053-0.046,0.103-0.065,0.156l-14.641,41.475l-9.982,28.279    c-0.132,0.376-0.227,0.758-0.298,1.143h-24.992c-4.15,0-7.515,3.364-7.515,7.515c0,4.151,3.365,7.515,7.515,7.515h208.114    c4.151,0,7.515-3.364,7.515-7.515c0-4.151-3.364-7.515-7.515-7.515H193.093l45.83-16.178c0.038-0.014,0.074-0.033,0.112-0.047    c0.178-0.066,0.353-0.14,0.526-0.219c0.069-0.032,0.138-0.062,0.205-0.095c0.18-0.09,0.357-0.189,0.531-0.295    c0.056-0.034,0.114-0.065,0.169-0.1c0.181-0.116,0.357-0.243,0.53-0.377c0.043-0.033,0.088-0.062,0.13-0.096    c0.209-0.168,0.414-0.349,0.608-0.543l154.644-154.643h65.255v160.546L354.137,387.53c-2.935,2.936-2.935,7.693,0,10.628    c0.183,0.183,0.374,0.355,0.571,0.516c1.378,1.123,3.061,1.685,4.743,1.685s3.366-0.562,4.743-1.685    c0.197-0.16,0.388-0.333,0.571-0.516c0.003-0.003,0,0,0.003-0.003L496.972,265.95V332.252z M222.677,265.696l-21.526,7.599    l-14.342-14.342l7.599-21.526L222.677,265.696z"></path></g></g></svg>
+                </div>
+                <div class="tongquat-item-chuthich">
+                    <h4 class="tongquat-item-title">Đẳng cấp thiết kế</h4>
+                    <p class="tongquat-item-sub-title">Liên tục đổi mới, sáng tạo cũng như cập nhật các phong cách quốc tế để tạo ra những thiết kế đẳng cấp, mang phong cách riêng của chủ sở hữu.</p>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-4 col-sm-12 tongquat-item" data-aos-offset="-300" data-aos-once="true" data-aos-delay="600" data-aos="fade-up" data-aos-anchor-placement="center-center">
+                <div class="svg-container">
+                    <svg class="tongquat-svg2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511 511.9994"><path d="m477.902344 256.0625c10.773437-21.476562 19.253906-43.066406 25.140625-64.339844 18.457031-66.65625 9.519531-122.472656-25.171875-157.160156-34.6875-34.6875-90.503906-43.628906-157.160156-25.171875-21.273438 5.886719-42.863282 14.371094-64.339844 25.140625-26.71875-13.410156-53.476563-23.222656-79.257813-28.875-59.882812-13.125-110.355469-2.859375-142.117187 28.90625-20.386719 20.386719-32.210938 49.03125-34.1875 82.839844-1.777344 30.414062 4.386718 65.316406 17.820312 101.269531-11.03125 8.722656-18.128906 22.207031-18.128906 37.328125s7.097656 28.605469 18.128906 37.328125c-13.433594 35.953125-19.597656 70.859375-17.820312 101.269531 1.980468 33.808594 13.800781 62.453125 34.1875 82.839844 22.765625 22.769531 54.707031 34.507812 93.289062 34.507812 7.746094 0 15.761719-.472656 24.027344-1.425781 33.082031-3.816406 68.429688-15.085937 104.109375-33.027343 21.460937 10.761718 43.035156 19.234374 64.289063 25.117187 22.683593 6.28125 44.113281 9.390625 63.882812 9.390625 38.316406 0 70.394531-11.679688 93.277344-34.5625 31.765625-31.761719 42.03125-82.234375 28.90625-142.121094-5.652344-25.777344-15.464844-52.535156-28.875-79.253906zm-153.183594-232.191406c61.214844-16.949219 111.832031-9.378906 142.527344 21.316406 30.695312 30.695312 38.265625 81.3125 21.316406 142.527344-4.746094 17.148437-11.265625 34.53125-19.375 51.898437-14.53125-26.058593-32.402344-51.878906-53.109375-76.507812 6.34375-8.085938 10.140625-18.261719 10.140625-29.3125 0-10.683594-3.457031-20.777344-10.003906-29.191407l-11.859375 9.222657c4.476562 5.753906 6.839843 12.660156 6.839843 19.96875 0 17.953125-14.605468 32.554687-32.554687 32.554687s-32.554687-14.601562-32.554687-32.554687 14.605468-32.554688 32.554687-32.554688c5.859375 0 11.605469 1.570313 16.609375 4.546875l7.679688-12.914062c-7.328126-4.355469-15.726563-6.660156-24.289063-6.660156-11.050781 0-21.226563 3.800781-29.308594 10.144531-24.632812-20.707031-50.453125-38.578125-76.511719-53.113281 17.367188-8.105469 34.75-14.625 51.898438-19.371094zm-279.097656 21.316406c40.621094-40.621094 115.105468-39.105469 194.363281-1.988281-38.691406 21.578125-76.640625 50.472656-111.261719 85.089843-25.671875 25.671876-48.265625 53.246094-67.246094 82.03125-4.277343-1.242187-8.777343-1.902343-13.394531-1.902343-5.683593 0-11.132812 1.007812-16.191406 2.839843-26.03125-70.949218-21.15625-131.1875 13.730469-166.070312zm83.054687 451.679688c-33.988281 0-62.882812-9.882813-83.058593-30.054688-34.882813-34.882812-39.761719-95.117188-13.726563-166.070312 5.058594 1.835937 10.507813 2.839843 16.191406 2.839843 4.644531 0 9.128907-.683593 13.378907-1.929687 18.980468 28.796875 41.582031 56.378906 67.261718 82.058594 34.609375 34.605468 72.546875 63.492187 111.226563 85.070312-39.730469 18.59375-77.953125 28.089844-111.273438 28.085938zm127.714844-36.261719c-40.582031-21.316407-80.65625-51.136719-117.042969-87.519531-24.449218-24.453126-46.015625-50.65625-64.199218-77.984376 12.382812-8.597656 20.511718-22.914062 20.511718-39.097656 0-1.410156-.058594-2.835937-.183594-4.238281l-14.96875 1.324219c.085938.960937.128907 1.9375.128907 2.910156 0 17.953125-14.605469 32.554688-32.554688 32.554688s-32.554687-14.601563-32.554687-32.554688 14.605468-32.554688 32.554687-32.554688c12.398438 0 23.558594 6.890626 29.121094 17.980469l13.429687-6.734375c-3.671874-7.324218-9.023437-13.390625-15.453124-17.847656 18.179687-27.304688 39.734374-53.496094 64.167968-77.929688 36.394532-36.394531 76.484375-66.222656 117.078125-87.539062 27.628907 14.542969 55.582031 33.292969 82.664063 56-5.070313 7.5625-8.03125 16.648438-8.03125 26.417969 0 26.234375 21.347656 47.578125 47.582031 47.578125 9.769531 0 18.855469-2.960938 26.417969-8.03125 22.707031 27.082031 41.453125 55.039062 55.996094 82.664062-21.316407 40.59375-51.144532 80.683594-87.535157 117.082032-4.003906 4-8.117187 7.976562-12.273437 11.871093-8.292969-7.015625-19-11.257812-30.6875-11.257812-10.683594 0-20.777344 3.460937-29.191406 10.003906l9.226562 11.859375c5.75-4.472656 12.65625-6.835938 19.964844-6.839844 17.949218 0 32.554687 14.605469 32.554687 32.554688 0 17.953125-14.605469 32.554687-32.554687 32.554687-17.949219 0-32.554688-14.601562-32.554688-32.554687 0-5.859375 1.570313-11.601563 4.546875-16.605469l-12.914062-7.683594c-4.355469 7.328125-6.660157 15.726563-6.660157 24.289063 0 7.539062 1.769532 14.664062 4.902344 21.003906-10.527344 6.71875-21.042968 12.828125-31.488281 18.324219zm210.855469 6.207031c-30.695313 30.699219-81.3125 38.265625-142.527344 21.320312-17.136719-4.746093-34.503906-11.257812-51.859375-19.359374 7.914063-4.421876 15.832031-9.167969 23.726563-14.222657 8.644531 8.820313 20.675781 14.308594 33.972656 14.308594 26.234375 0 47.582031-21.34375 47.582031-47.578125 0-9.136719-2.59375-17.671875-7.074219-24.929688 4.429688-4.144531 8.8125-8.378906 13.074219-12.640624 34.621094-34.625 63.511719-72.574219 85.09375-111.265626 37.117187 79.261719 38.632813 153.746094-1.988281 194.367188zm0 0"></path><path d="m379.640625 333.632812h-15.523437v-37.855468c0-16.742188-11.253907-31.609375-27.367188-36.15625l-5.617188-1.582032-4.078124 14.460938 5.617187 1.585938c9.664063 2.726562 16.417969 11.644531 16.417969 21.691406v37.855468h-27.046875v-20.535156h-15.023438v20.535156h-67.617187v15.023438h140.238281zm0 0"></path><path d="m281.28125 259.589844 31.3125 8.835937 4.082031-14.464843-30.691406-8.65625v-19.953126c13.894531-9.476562 23.039063-25.425781 23.039063-43.476562v-22.039062c0-28.996094-23.589844-52.589844-52.589844-52.589844-28.996094 0-52.589844 23.59375-52.589844 52.589844v22.039062c0 18.050781 9.144531 34 23.039062 43.476562v19.953126l-50.765624 14.316406c-16.113282 4.546875-27.367188 19.414062-27.367188 36.15625v37.855468h-15.523438v15.023438h91.152344v-15.023438h-18.53125v-20.535156h-15.023437v20.535156h-27.046875v-37.855468c0-10.046875 6.753906-18.964844 16.417968-21.691406l51.390626-14.492188c6.328124 6.921875 15.265624 10.933594 24.847656 10.933594 9.582031 0 18.523437-4.015625 24.847656-10.9375zm-24.847656-137.316406c20.710937 0 37.5625 16.851562 37.5625 37.566406v8.367187l-15.792969-20.890625h-57.179687c5.167968-14.574218 19.085937-25.042968 35.410156-25.042968zm-37.5625 59.601562v-19.53125h51.855468l22.023438 29.125c-4.253906 16.082031-18.921875 27.96875-36.316406 27.96875-20.710938 0-37.5625-16.851562-37.5625-37.5625zm23.039062 66.691406v-16.160156c4.613282 1.332031 9.484375 2.058594 14.523438 2.058594 5.039062 0 9.90625-.726563 14.523437-2.058594v16.160156c-3.53125 4.371094-8.820312 6.933594-14.523437 6.933594s-10.996094-2.5625-14.523438-6.933594zm0 0"></path><path d="m296.113281 294.996094-21.164062-5.96875 4.082031-14.460938 21.160156 5.96875zm0 0"></path><path d="m329.097656 288.664062-4.082031 14.460938-14.460937-4.078125 4.082031-14.460937zm0 0"></path><path d="m371.128906 126.28125h15.023438v15.027344h-15.023438zm0 0"></path><path d="m323.046875 413.769531h15.023437v15.023438h-15.023437zm0 0"></path><path d="m40.566406 248.488281h15.027344v15.023438h-15.027344zm0 0"></path></svg>
+                </div>
+                <div class="tongquat-item-chuthich">
+                    <h4 class="tongquat-item-title">Kinh nghiệm</h4>
+                    <p class="tongquat-item-sub-title">Xây dựng Tình Vòong với hơn 20 năm kinh nghiệm cùng với các công trình lớn nhỏ khác nhau đảm bảo chất lượng công trình tới khách hàng.</p>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-4 col-sm-12 tongquat-item" data-aos-offset="-300" data-aos-once="true" data-aos-delay="900" data-aos="fade-up" data-aos-anchor-placement="center-center">
+                <div class="svg-container">
+                    <svg fill="currentColor" class="tongquat-svg3" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 484.704 484.704" style="enable-background:new 0 0 484.704 484.704;" xml:space="preserve"> 		<path d="M240.313,88.989c-21.81,0-39.553,17.743-39.553,39.552c0,21.81,17.743,39.553,39.553,39.553s39.552-17.743,39.552-39.553 			C279.865,106.732,262.123,88.989,240.313,88.989z"></path> 		<path d="M414.255,75.486C368.941,30.95,307.781,6.145,243.529,5.637C179.02,5.75,116.746,30.318,71.09,74.858 			C25.247,119.58,0,179.063,0,242.352c0,62.946,25.014,122.201,70.432,166.85c45.302,44.533,107.305,69.345,171.546,69.865 			c64.506-0.117,125.983-24.685,171.636-69.221c45.844-44.723,71.09-104.206,71.09-167.494 			C484.705,179.397,459.685,120.136,414.255,75.486z M240.313,398.341c-21.81,0-39.553-17.744-39.553-39.553 			c0-21.81,17.743-39.552,39.553-39.552s39.552,17.743,39.552,39.552C279.865,380.597,262.123,398.341,240.313,398.341z 			 M241.893,230.242c-32.956,1.251-63.887,14.468-87.097,37.217c-23.777,23.305-36.872,54.273-36.872,87.196 			c0,28.63,9.633,55.841,27.353,77.86C73.641,397.566,24.236,325.28,24.236,242.352c0-117.166,97.847-212.486,218.116-212.486 			c0.139,0,0.278-0.002,0.417-0.007c55.056,0.224,99.774,45.083,99.774,100.19C342.544,184.089,298.332,228.1,241.893,230.242z"></path>  </svg>
+                </div>
+                <div class="tongquat-item-chuthich">
+                    <h4 class="tongquat-item-title">Thương hiệu</h4>
+                    <p class="tongquat-item-sub-title">Là một trong những đại diện nổi bật của Hiệp hội Xây dựng Vân Đồn, Quảng Ninh - trọn chữ tín, gửi niềm tin.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row tongquat">
+            <h3 class="tongquat-heading" data-aos-offset="-300" data-aos-once="true" data-aos-delay="300" data-aos="fade-down" data-aos-anchor-placement="center-center">Công trình thi công nổi bật</h3>
+            <div class="col-xl-3 col-md-3 col-sm-12">
+                <div class="img-product-item" data-aos="zoom-out-right">
+                    <div class="img-wrapper">
+                        <img src="http://caykiengbinhduong.com/wp-content/uploads/2019/08/66e2a7732f6acb34927b.jpg" alt="" class="img-item">
+                    </div>
+                    <h3 class="img-text">Biệt thự sân vườn hiện đại</h3>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-3 col-sm-12">
+                <div class="img-product-item" data-aos="zoom-out-right">
+                    <div class="img-wrapper">
+                        <img src="https://wedo.vn/wp-content/uploads/2019/10/nha-ong-2-tang-1-tum-3-phong-ngu-1.jpg" alt="" class="img-item">
+                    </div>
+                    <h3 class="img-text">Nhà cao tầng</h3>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-3 col-sm-12">
+                <div class="img-product-item" data-aos="zoom-out-left">
+                    <div class="img-wrapper">
+                        <img src="https://vietnamembassy-thailand.org/wp-content/uploads/2019/05/hinh-anh-nha-mai-thai-dep-4.jpg" alt="" class="img-item">
+                    </div>
+                    <h3 class="img-text">Mái thái truyền thống</h3>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-3 col-sm-12">
+                <div class="img-product-item" data-aos="zoom-out-left">
+                    <div class="img-wrapper">
+                        <img src="https://i.ytimg.com/vi/UPQXxc0L_CA/maxresdefault.jpg" alt="" class="img-item">
+                    </div>
+                    <h3 class="img-text">Hệ thống cống thoát nước</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row tongquat about">
+            <h3 class="tongquat-heading" data-aos-offset="-300" data-aos-once="true" data-aos-delay="300" data-aos="fade-up" data-aos-anchor-placement="center-center">---------- About ----------</h3>
+            <div class="col-xl-4 col-md-4 col-sm-12" data-aos="zoom-in">
+                <img src="https://scontent.fhan3-1.fna.fbcdn.net/v/t1.6435-9/131011616_104234804921696_1592493557530127097_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=j6ZKtqRKH8gAX8I6TZF&tn=jTbLmMf99mF4Jc7Z&_nc_ht=scontent.fhan3-1.fna&oh=e4d719dbc2d0c8e7323dad1d16a5819c&oe=61A4CA33"
+                    alt="" class="img-boss">
+            </div>
+            <div class="col-xl-8 col-md-8 thongtin" data-aos="flip-up">
+                <p class="thongtin-head">Chủ thầu xây dựng: <span class="thongtin-chitiet">Phan Ngọc Tình</span></p>
+                <p class="thongtin-head">Năm sinh: <span class="thongtin-chitiet">1974</span></p>
+                <p class="thongtin-head">Quê quán: <span class="thongtin-chitiet">Thái Bình</span></p>
+                <p class="thongtin-head">Địa chỉ thường trú: <span class="thongtin-chitiet">Đông Xá - Vân Đồn - Quảng Ninh</span></p>
+                <p class="thongtin-head">Lĩnh vực thi công chủ yếu: <span class="thongtin-chitiet">nhà cửa, trường học, bệnh viện, văn phòng, cầu đường, hệ thống cống thoát nước,...</span></p>
+                <p class="thongtin-head">Kinh nghiệm: <span class="thongtin-chitiet">dày dặn kinh nghiệm trong tư vấn, thi công với hơn 20 năm trong nghề</span></p>
+                <p class="thongtin-head">Tính cách: <span class="thongtin-chitiet">thân thiện, hòa đồng, nhiệt tình, trách nhiệm, thích giao lưu kết bạn...</span></p>
+                <p class="thongtin-head">Đội ngũ thi công: <span class="thongtin-chitiet">có chuyên môn, tay nghề, kĩ thuật cao; thường xuyên cập nhật công nghệ, phong cách hiện đại, đáp ứng các tiêu chuẩn ngành nghề.</span></p>
+                <p class="thongtin-head">Giá khoán: <span class="thongtin-chitiet">1.5triệu/1m2</span></p>
+                <p class="thongtin-head"><i class="fas fa-phone-volume animate__animated animate__infinite	infinite animate__tada" style="font-size: 24px;color: red;"></i> Liên hệ ngay: <span class="thongtin-chitiet highlight">0915.627.169</span></p>
+            </div>
+        </div>
+        <div class="row footer">
+            <div class="col-xl-9 col-md-8 footer-left">
+                <h3 class="footer-heading">Xây dựng công trình, tư vấn thiết kế Tình Voòng</h3>
+                <h4 class="footer-sub-heading">Địa chỉ: Ngã 3 Lò Vôi, Đông Xá, Vân Đồn</h4>
+                <h4 class="footer-sub-heading">© 2021 - All Rights Reserved</h4>
+            </div>
+            <div class="col footer-right">
+                <a href="https://www.google.com/maps/@21.0608228,107.4119766,18z">
+                    <img src="/map.png" alt="" id="img-map"></a>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+
+</html>

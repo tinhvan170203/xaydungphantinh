@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/9.1.2/highcharts.js" integrity="sha512-prZV5wNX5I3fC7LuHbGSVaZdkGSaGozWsk6GjjDqulbi3kcummKxIiR7O5lFh2ec/M0AxlHC8zokmLco+SfD/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/9.1.2/highcharts-3d.min.js" integrity="sha512-1gBNRtCRCC0YCoX+0D0merrBykWG+YLm+eBfvcYinv437RZqsg4FWx93IGv4qMDgNenQsCIiKc8Vd8qPG7EzMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<style>
+    .thongke-list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .thongke-item {
+        width: 24%;
+        background-color: rgb(33, 162, 162);
+        /* margin: 10px 2px; */
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .thongke-item::after {
+        content: '';
+        clear: both;
+        position: absolute;
+        bottom: 0;
+        left: 100px;
+        width: 0;
+        height: 0;
+        background: rgb(155, 24, 24);
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+    
+    .thongke-item:hover:after {
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+    }
+    
+    .thongke-item-left {
+        padding: 0 20px;
+    }
+    
+    .thongke-item-left svg {
+        color: white;
+    }
+    
+    .thongke-item-right {
+        flex: 1;
+        background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+        background-image: linear-gradient(30deg, #a6c0fe 0%, rgba(139, 109, 183, 0.948)80%, #938182 100%);
+    }
+</style>
+
+<body>
+    <figure class="highcharts-figure">
+        <div id="container"></div>
+    </figure>
+    <figure class="highcharts-figure">
+        <div id="container1" style="width: 600px"></div>
+    </figure>
+    <!-- <div class="thongke-list">
+        <div class="thongke-item">
+            <div class="thongke-item-left">
+                <svg style="width: 20px" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bell" class="svg-inline--fa fa-bell fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224 512c35.32 0 63.97-28.65 63.97-64H160.03c0 35.35 28.65 64 63.97 64zm215.39-149.71c-19.32-20.76-55.47-51.99-55.47-154.29 0-77.7-54.48-139.9-127.94-155.16V32c0-17.67-14.32-32-31.98-32s-31.98 14.33-31.98 32v20.84C118.56 68.1 64.08 130.3 64.08 208c0 102.3-36.15 133.53-55.47 154.29-6 6.45-8.66 14.16-8.61 21.71.11 16.4 12.98 32 32.1 32h383.8c19.12 0 32-15.6 32.1-32 .05-7.55-2.61-15.27-8.61-21.71z"></path></svg>
+            </div>
+            <div class="thongke-item-right">
+                <h5 class="thongke-item-title">Tiêu đề thống kê</h5>
+                <h4 class="thongke-item-soluong">60</h4>
+            </div>
+        </div>
+        <div class="thongke-item">
+            <div class="thongke-item-left">
+                <svg style="width: 20px" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bell" class="svg-inline--fa fa-bell fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224 512c35.32 0 63.97-28.65 63.97-64H160.03c0 35.35 28.65 64 63.97 64zm215.39-149.71c-19.32-20.76-55.47-51.99-55.47-154.29 0-77.7-54.48-139.9-127.94-155.16V32c0-17.67-14.32-32-31.98-32s-31.98 14.33-31.98 32v20.84C118.56 68.1 64.08 130.3 64.08 208c0 102.3-36.15 133.53-55.47 154.29-6 6.45-8.66 14.16-8.61 21.71.11 16.4 12.98 32 32.1 32h383.8c19.12 0 32-15.6 32.1-32 .05-7.55-2.61-15.27-8.61-21.71z"></path></svg>
+            </div>
+            <div class="thongke-item-right">
+                <h5 class="thongke-item-title">Tiêu đề thống kê</h5>
+                <h4 class="thongke-item-soluong">60</h4>
+            </div>
+        </div>
+        <div class="thongke-item">
+            <div class="thongke-item-left">
+                <svg style="width: 20px" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bell" class="svg-inline--fa fa-bell fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224 512c35.32 0 63.97-28.65 63.97-64H160.03c0 35.35 28.65 64 63.97 64zm215.39-149.71c-19.32-20.76-55.47-51.99-55.47-154.29 0-77.7-54.48-139.9-127.94-155.16V32c0-17.67-14.32-32-31.98-32s-31.98 14.33-31.98 32v20.84C118.56 68.1 64.08 130.3 64.08 208c0 102.3-36.15 133.53-55.47 154.29-6 6.45-8.66 14.16-8.61 21.71.11 16.4 12.98 32 32.1 32h383.8c19.12 0 32-15.6 32.1-32 .05-7.55-2.61-15.27-8.61-21.71z"></path></svg>
+            </div>
+            <div class="thongke-item-right">
+                <h5 class="thongke-item-title">Tiêu đề thống kê</h5>
+                <h4 class="thongke-item-soluong">60</h4>
+            </div>
+        </div>
+        <div class="thongke-item">
+            <div class="thongke-item-left">
+                <svg style="width: 20px" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bell" class="svg-inline--fa fa-bell fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224 512c35.32 0 63.97-28.65 63.97-64H160.03c0 35.35 28.65 64 63.97 64zm215.39-149.71c-19.32-20.76-55.47-51.99-55.47-154.29 0-77.7-54.48-139.9-127.94-155.16V32c0-17.67-14.32-32-31.98-32s-31.98 14.33-31.98 32v20.84C118.56 68.1 64.08 130.3 64.08 208c0 102.3-36.15 133.53-55.47 154.29-6 6.45-8.66 14.16-8.61 21.71.11 16.4 12.98 32 32.1 32h383.8c19.12 0 32-15.6 32.1-32 .05-7.55-2.61-15.27-8.61-21.71z"></path></svg>
+            </div>
+            <div class="thongke-item-right">
+                <h5 class="thongke-item-title">Tiêu đề thống kê</h5>
+                <h4 class="thongke-item-soluong">60</h4>
+            </div>
+        </div>
+        <div class="thongke-item">
+            <div class="thongke-item-left">
+                <svg style="width: 20px" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bell" class="svg-inline--fa fa-bell fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224 512c35.32 0 63.97-28.65 63.97-64H160.03c0 35.35 28.65 64 63.97 64zm215.39-149.71c-19.32-20.76-55.47-51.99-55.47-154.29 0-77.7-54.48-139.9-127.94-155.16V32c0-17.67-14.32-32-31.98-32s-31.98 14.33-31.98 32v20.84C118.56 68.1 64.08 130.3 64.08 208c0 102.3-36.15 133.53-55.47 154.29-6 6.45-8.66 14.16-8.61 21.71.11 16.4 12.98 32 32.1 32h383.8c19.12 0 32-15.6 32.1-32 .05-7.55-2.61-15.27-8.61-21.71z"></path></svg>
+            </div>
+            <div class="thongke-item-right">
+                <h5 class="thongke-item-title">Tiêu đề thống kê</h5>
+                <h4 class="thongke-item-soluong">60</h4>
+            </div>
+        </div>
+        <div class="thongke-item">
+            <div class="thongke-item-left">
+                <svg style="width: 20px" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bell" class="svg-inline--fa fa-bell fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224 512c35.32 0 63.97-28.65 63.97-64H160.03c0 35.35 28.65 64 63.97 64zm215.39-149.71c-19.32-20.76-55.47-51.99-55.47-154.29 0-77.7-54.48-139.9-127.94-155.16V32c0-17.67-14.32-32-31.98-32s-31.98 14.33-31.98 32v20.84C118.56 68.1 64.08 130.3 64.08 208c0 102.3-36.15 133.53-55.47 154.29-6 6.45-8.66 14.16-8.61 21.71.11 16.4 12.98 32 32.1 32h383.8c19.12 0 32-15.6 32.1-32 .05-7.55-2.61-15.27-8.61-21.71z"></path></svg>
+            </div>
+            <div class="thongke-item-right">
+                <h5 class="thongke-item-title">Tiêu đề thống kê</h5>
+                <h4 class="thongke-item-soluong">60</h4>
+            </div>
+        </div>
+    </div> -->
+</body>
+<script>
+    Highcharts.chart('container', {
+        chart: {
+            type: 'spline',
+            width: 400,
+            height: 250,
+            // backgroundColor: '#ccc',
+            style: {
+                fontFamily: 'serif',
+                fontSize: 14,
+            },
+            yAxis: {
+                lineColor: 'blue',
+                lineWidth: 2
+            },
+        },
+        credits: {
+            enabled: false
+        },
+        title: {
+            text: 'Monthly Average Temperature'
+        },
+        subtitle: {
+            text: 'Source: WorldClimate.com'
+        },
+        xAxis: {
+            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+            ]
+        },
+        yAxis: {
+            title: {
+                text: 'Số lượng'
+            },
+            labels: {
+                formatter: function() {
+                    return this.value + '°';
+                }
+            }
+        },
+        // legend: {
+        //     align: 'left',
+        //     verticalAlign: 'top',
+        //     floating: true
+        // },
+        tooltip: {
+            crosshairs: true,
+            shared: true
+        },
+        plotOptions: {
+            spline: {
+                marker: {
+                    radius: 4,
+                    lineColor: '#666666',
+                    lineWidth: 1
+                }
+            }
+        },
+        series: [{
+            name: 'Tokyo',
+            marker: {
+                symbol: 'round'
+            },
+            data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, {
+                y: 26.5,
+                marker: {
+                    symbol: 'url(https://www.highcharts.com/samples/graphics/sun.png)'
+                }
+            }, 23.3, 18.3, 13.9, 9.6]
+
+        }, {
+            name: 'London',
+            marker: {
+                symbol: 'diamond'
+            },
+            data: [{
+                y: 3.9,
+                marker: {
+                    symbol: 'url(https://www.highcharts.com/samples/graphics/snow.png)'
+                }
+            }, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+        }, {
+            name: 'Sài Gòn',
+            data: [8.9, 4.1232, 512312.7, 823423.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+        }]
+    });
+    Highcharts.chart('container1', {
+        chart: {
+            type: 'column',
+
+            colorAxis: [{
+                colors: ["#fff", "#red"]
+            }]
+        },
+        xAxis: {
+            categories: [
+                'Jan',
+                'Feb',
+                'Mar',
+                'Apr',
+                'May',
+                'Jun',
+                'Jul',
+                'Aug',
+                'Sep',
+                'Oct',
+                'Nov',
+                'Dec'
+            ],
+            crosshair: true
+        },
+        yAxis: {
+            min: 0,
+
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: 'Tokyo',
+            data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+
+        }, {
+            name: 'New York',
+            data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0, 104.3, 91.2, 83.5, 106.6, 92.3]
+
+        }, {
+            name: 'London',
+            data: [48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0, 59.6, 52.4, 65.2, 59.3, 51.2]
+
+        }, {
+            name: 'Berlin',
+            data: [42.4, 33.2, 34.5, 39.7, 52.6, 75.5, 57.4, 60.4, 47.6, 39.1, 46.8, 51.1]
+
+        }]
+    });
+</script>
+
+</html>
