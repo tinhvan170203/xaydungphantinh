@@ -385,7 +385,7 @@
         position: fixed;
         z-index: 100;
         bottom: 50px;
-        right: 12px
+        right: 24px
     }
     
     .active {
@@ -590,13 +590,10 @@
             border-radius: 100%;
         }
         .tongquat-heading {
-            font-size: 16px;
-            line-height: 28px;
-            margin: 12px auto;
-            font-family: Tahoma;
-            color: #333;
-            text-shadow: none;
-            letter-spacing: 2px
+            display: none
+        }
+        .tongquat-item:first-child {
+            margin-top: 24px
         }
         .tongquat-item-chuthich {
             height: 180px;
@@ -613,6 +610,9 @@
         .footer-heading {
             font-size: 14px;
             line-height: 24px
+        }
+        .slide-show {
+            margin-top: 12px
         }
         .footer-left {
             margin: 12px auto;
@@ -669,19 +669,25 @@
             font-size: 14px;
             text-align: center;
         }
-        /* Tablet Styles */
-        @media only screen and (min-width: 768px) and (max-width: 840px) {
-            .tongquat-heading {
-                font-size: 20px;
-            }
-            .tongquat-item-title {
-                font-size: 16px;
-            }
-            .tongquat-item-sub-title {
-                font-size: 15px;
-            }
-            .img-text {
-                font-size: 14px;
-            }
+        .thongtin {
+            margin-top: 12px
+        }
+    }
+    
+    ;
+    /* Tablet Styles */
+    
+    @media only screen and (min-width: 768px) and (max-width: 840px) {
+        .tongquat-heading {
+            font-size: 20px;
+        }
+        .tongquat-item-title {
+            font-size: 16px;
+        }
+        .tongquat-item-sub-title {
+            font-size: 15px;
+        }
+        .img-text {
+            font-size: 14px;
         }
     }
