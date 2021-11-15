@@ -602,12 +602,6 @@
         .tongquat-item {
             margin: 6px 12px 6px
         }
-        .tongquat-item:first-child {
-            margin-top: 24px
-        }
-        .tongquat-item-chuthich {
-            height: 180px;
-        }
         .svg-container {
             padding: 6px;
             margin-right: 18px;
@@ -689,9 +683,10 @@
         .thongtin {
             margin-top: 12px
         }
+        .tongquat-item:first-child {
+            margin-top: 24px
+        }
     }
-    
-    ;
     /* Tablet Styles */
     
     @media only screen and (min-width: 768px) and (max-width: 840px) {
