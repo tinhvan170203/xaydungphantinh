@@ -383,7 +383,7 @@
         width: 40px;
         border-radius: 100%;
         position: fixed;
-        z-index: 100;
+        z-index: 1000000;
         bottom: 50px;
         right: 24px
     }
