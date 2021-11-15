@@ -569,6 +569,13 @@
         #banner {
             display: none
         }
+        .tongquat-item-chuthich {
+            height: auto
+        }
+        .img-boss {
+            margin-top: 24px;
+            margin-bottom: 12px;
+        }
         .navbar-mobile {
             display: flex
         }
@@ -595,6 +602,9 @@
         }
         .tongquat-heading {
             display: none;
+        }
+        .tongquat-item {
+            margin: 18px
         }
         .tongquat-item:first-child {
             margin-top: 24px
