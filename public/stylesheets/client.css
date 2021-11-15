@@ -559,11 +559,7 @@
     }
     /* Mobile Styles */
     
-    @media only screen and (max-width: 400px) {
-        .tongquat-item:first-child {
-            margin-top: 24px
-        }
-    }
+    @media only screen and (max-width: 400px) {}
     
     @media only screen and (max-width: 767px) {
         #banner {
@@ -604,11 +600,11 @@
             display: none;
         }
         .tongquat-item {
-            margin: 18px
+            margin: 6px 12px 6px
         }
-        /* .tongquat-item:first-child {
+        .tongquat-item:first-child {
             margin-top: 24px
-        } */
+        }
         .tongquat-item-chuthich {
             height: 180px;
         }
