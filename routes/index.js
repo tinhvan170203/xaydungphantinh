@@ -51,7 +51,7 @@ router.post('/admin/users/edit/:id', danhmuc.editUserPost)
 
 
 
-router.get('/trangchu', danhmuc.homePage)
+router.get('/', danhmuc.homePage)
 router.get('/trangtin/:id', danhmuc.trangtinPage)
 router.get('/trangtin/:id/getNews/:page', danhmuc.getNews)
 
