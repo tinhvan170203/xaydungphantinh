@@ -559,7 +559,11 @@
     }
     /* Mobile Styles */
     
-    @media only screen and (max-width: 400px) {}
+    @media only screen and (max-width: 400px) {
+        .tongquat-item:first-child {
+            margin-top: 24px
+        }
+    }
     
     @media only screen and (max-width: 767px) {
         #banner {
