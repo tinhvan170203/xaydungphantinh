@@ -226,8 +226,8 @@
                 imgList[i].style.height = 'auto';
             }
         }
-        document.addEventListener("resize", function() {
-            console.log('111')
+
+        window.addEventListener("resize", function() {
             let widthScreen = window.innerWidth;
             if (widthScreen < 768) {
                 for (let i = 0; i <= imgList.length - 1; i++) {
