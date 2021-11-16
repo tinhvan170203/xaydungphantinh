@@ -227,11 +227,11 @@
             }
         }
 
-        window.addEventListener("resize", function() {
-            let widthScreen = window.innerWidth;
-            for (let i = 0; i <= imgList.length - 1; i++) {
-                let width = imgList[i].clientWidth;
-                let height = imgList[i].clientHeight;
+        for (let i = 0; i <= imgList.length - 1; i++) {
+            let width = imgList[i].clientWidth;
+            let height = imgList[i].clientHeight;
+            window.addEventListener("resize", function() {
+                let widthScreen = window.innerWidth;
                 if (widthScreen < 768) {
                     imgList[i].style.width = '100%';
                     imgList[i].style.height = 'auto';
@@ -239,8 +239,8 @@
                     imgList[i].style.width = `${width}px`;
                     imgList[i].style.height = `${height}px`;
                 }
-            }
-        });
+            });
+        }
         // $('#product-noidung img').css('width', '100%')
         // $('#product-noidung img').css('height', 'auto')
     </script>
