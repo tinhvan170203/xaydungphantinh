@@ -106,31 +106,31 @@
             <!-- navbar desktop  -->
             <ul class="navbar-desktop col-xl-12">
                 <li class="navbar-item">
-                    <a href="#">
+                    <a href="/">
                         <i class="fas fa-home navbar-desktop-icon"></i>
                         <span class="navbar-desktop-text">Trang chủ</span>
                     </a>
                 </li>
                 <li class="navbar-item">
-                    <a href="#">
+                    <a href="/trangtin/617a566f4d8dcef2f898156a">
                         <i class="fas fa-archway navbar-desktop-icon"></i>
                         <span class="navbar-desktop-text">Biệt thự</span>
                     </a>
                 </li>
                 <li class="navbar-item">
-                    <a href="#">
+                    <a href="/trangtin/617d62f5e1382f350c875735">
                         <i class="far fa-building navbar-desktop-icon"></i>
                         <span class="navbar-desktop-text">Nhà cao tầng</span>
                     </a>
                 </li>
                 <li class="navbar-item">
-                    <a href="#">
+                    <a href="/trangtin/61931260ee3221002334d24a">
                         <i class="fas fa-church navbar-desktop-icon"></i>
                         <span class="navbar-desktop-text">Nhà mái thái</span>
                     </a>
                 </li>
                 <li class="navbar-item">
-                    <a href="#">
+                    <a href="/trangtin/617d62f5e1382f350c875735">
                         <i class="fab fa-chromecast navbar-desktop-icon"></i>
                         <span class="navbar-desktop-text">Cầu, cống thoát nước</span>
                     </a>
@@ -217,8 +217,12 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
-        $('#product-noidung img').css('width', '100%')
-        $('#product-noidung img').css('height', 'auto')
+        const imgList = document.querySelectorAll('#product-noidung img');
+        imgList.forEach(function(e) {
+                console.log(e.target)
+            })
+            // $('#product-noidung img').css('width', '100%')
+            // $('#product-noidung img').css('height', 'auto')
     </script>
 </body>
 
