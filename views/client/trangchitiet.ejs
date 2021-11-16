@@ -224,9 +224,17 @@
             if (width > widthMax) {
                 imgList[i].style.width = '100%';
                 imgList[i].style.height = 'auto';
-                console.log('111')
             }
         }
+        document.addEventListener("resize", function() {
+            let widthScreen = window.innerWidth;
+            if (widthScreen < 768) {
+                for (let i = 0; i <= imgList.length - 1; i++) {
+                    imgList[i].style.width = '100%';
+                    imgList[i].style.height = 'auto';
+                }
+            }
+        });
         // $('#product-noidung img').css('width', '100%')
         // $('#product-noidung img').css('height', 'auto')
     </script>

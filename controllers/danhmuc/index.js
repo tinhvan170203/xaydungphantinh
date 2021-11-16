@@ -175,7 +175,7 @@ module.exports = {
         var result = await uploadNewToCloudinary(locaFilePath);
         news.minhhoa = result.url;
         let month = parseInt(new Date().getMonth()) + 1;
-        news.created_at = new Date().getFullYear() + '-' + month + '-' + new Date().getDay();
+        news.created_at = new Date().getFullYear() + '-' + month + '-' + new Date().getDate();
         await news.save();
         req.flash('mess', 'Thêm mới bài đăng thành công')
         res.redirect('/admin/news')
