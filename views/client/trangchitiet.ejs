@@ -229,10 +229,17 @@
 
         window.addEventListener("resize", function() {
             let widthScreen = window.innerWidth;
+            let width = imgList[i].clientWidth;
+            let height = imgList[i].clientHeight;
             if (widthScreen < 768) {
                 for (let i = 0; i <= imgList.length - 1; i++) {
                     imgList[i].style.width = '100%';
                     imgList[i].style.height = 'auto';
+                }
+            } else {
+                for (let i = 0; i <= imgList.length - 1; i++) {
+                    imgList[i].style.width = width;
+                    imgList[i].style.height = height;
                 }
             }
         });
