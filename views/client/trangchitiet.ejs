@@ -218,8 +218,14 @@
     <script>
         AOS.init();
         const imgList = document.querySelectorAll('#product-noidung img');
-        for (let i = 0; i <= imgList.length; i++) {
-            console.log(imgList[i]);
+        for (let i = 0; i <= imgList.length - 1; i++) {
+            let width = imgList[i].clientWidth;
+            let widthMax = imgList[i].parentNode.parentNode.clientWidth;
+            if (width > widthMax) {
+                imgList[i].style.width = '100%';
+                imgList[i].style.height = 'auto';
+                console.log('111')
+            }
         }
         // $('#product-noidung img').css('width', '100%')
         // $('#product-noidung img').css('height', 'auto')
