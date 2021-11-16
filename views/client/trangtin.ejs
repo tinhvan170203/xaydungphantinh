@@ -152,7 +152,7 @@
                         <ul class="news-hot-list">
                             <%if(hotNews && hotNews.length >0){
                                 hotNews.forEach(item=>{ %>
-                                <a href="#">
+                                <a href="/trangsanpham/<%=item._id%>">
                                     <li class="news-hot-item" data-aos-offset="-300" data-aos-once="false" data-aos-delay="300" data-aos="fade-up" data-aos-anchor-placement="center-center">
                                         <img class="news-hot-item-img" src="<%=item.minhhoa%>">
                                         <p class="news-hot-item-text">
